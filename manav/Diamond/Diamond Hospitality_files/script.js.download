@@ -1,0 +1,180 @@
+function mainNav(){
+	var winwt = $(window).width();
+	var footwt = $('.mainNav').width();
+	var margwt = (winwt-footwt)/2 ;
+	$('.mainNav').css({'left': margwt + 'px'});	
+}
+
+function setHomeScreen(){
+	$('.thisfull, .home-bg').css({'width': $(window).width(), 'height': $(window).height()});
+}
+
+function homeCenter(oprtr){	
+	var winht = $(window).height();	
+	var top = (winht - $(oprtr).outerHeight())/2;
+	$(oprtr).css({'top': top + 40 + 'px'});
+}
+
+function navScroll(){
+	if ($(this).scrollTop() > $(window).height()-140) {
+        // $('.smartscroll-nav, nav.smartscroll-nav .logo, nav.smartscroll-nav .logo a.scroll img, nav.smartscroll-nav .mainNav').css({'height': '100px'});
+        $('.smartscroll-nav, nav.smartscroll-nav .logo, nav.smartscroll-nav .logo a.scroll img, nav.smartscroll-nav .mainNav').css({'height': '116px'});
+        // $('nav.smartscroll-nav .logo a img').css({'height': '100px'});
+        // $('nav.smartscroll-nav .logo a img').attr("src", "img/logo_new.png");
+        $("#logo1").fadeOut();
+        $("#logo2").fadeIn();
+        $('.smartscroll-nav').css({'background':'#000'});
+        $('nav.smartscroll-nav .mainNav ul').css({'margin' : '42px 0 0'});
+        $('nav.smartscroll-nav .socialNav ul').css({'margin' : '38px 12px 0'});
+    } else {
+        // $('.smartscroll-nav, nav.smartscroll-nav .logo, nav.smartscroll-nav .logo a.scroll img, nav.smartscroll-nav .mainNav').css({'height': '155px'});
+        $('.smartscroll-nav, nav.smartscroll-nav .logo, nav.smartscroll-nav .logo a.scroll img, nav.smartscroll-nav .mainNav').css({'height': '200px'});
+        $('.smartscroll-nav').css({'background':'none'});
+        $('nav.smartscroll-nav .mainNav ul').css({'margin' : '64px 0 0'});
+        $('nav.smartscroll-nav .socialNav ul').css({'margin' : '58px 12px 0'});
+        $("#logo2").fadeOut();
+        $("#logo1").fadeIn();
+    }
+}
+
+function readMore(){
+	$('.read-more').on('click', function(e) {
+	     e.preventDefault();
+	     $('.what-we-do .col-sm-3').removeClass('active').addClass('inactive');
+	     $('.what-we-do-overlay').addClass('show-overlay');
+	     $(this).parents('.col-sm-3').removeClass('inactive').addClass('active');
+	     $('.what-we-do-detail').slideDown(700);
+
+		$('html, body').animate({scrollTop:$('#two').position().top+270}, 'slow');
+
+	     $('.read-more-close').on('click', function(e) {
+	     	e.preventDefault();
+	     	$('.what-we-do .col-sm-3').removeClass('inactive');
+	     	$('.col-sm-3').removeClass('active');
+	     	$('.what-we-do-overlay').removeClass('show-overlay');
+	     	$('.what-we-do-detail').slideUp(700);	     	
+	     });
+	});
+}
+
+$(".home-button a, .link_icon").click(function(){
+	rel = $(this).attr("rel");
+	$("#link_"+rel).trigger("click");
+});
+
+
+/*function formFile(){
+	$('#resume-team').change(function(e){
+		var file = $('#resume-team')[0].files[0];		
+		var ext = file.name.split('.').pop().toLowerCase();
+		if($.inArray(ext, ['docx','doc','pdf']) == -1) {
+			$('.file-psuedo').val('');
+			$('.file-psuedo').addClass('error');
+		    $('.file-psuedo').after('<span class="file-error">*Only .doc, .docx and .pdf files are allowed</span>');
+		}else{
+			$('.file-psuedo').val(file.name);
+			$('.file-error').remove();
+		}	 
+	});
+}*/
+
+
+$('#submitCareers').click(function(){
+    if (!$(".ajax-file-upload-filename").length) {
+        $("#file-error").fadeIn(100);
+        // return false;
+        return true;
+    }
+    else {
+        return true;
+    }
+});
+
+
+$("#uploadFile").uploadFile({
+    url:"upload.php",
+    fileName:"myfile",
+    maxFileCount: 1,
+    showDone: false,
+    showDelete: true,
+    showFileCounter: false,
+    onSuccess:function(files,data,xhr){
+        // console.log(files);
+        $("#file-error").fadeOut(0);
+        $("#hidden_file_name").val(files);
+    },
+    deleteCallback: function(data,pd) {
+        $(".ajax-file-upload-error").remove();
+        $.post("delete.php",{op:"delete",name:$("#hidden_file_name").val()},
+        function(resp, textStatus, jqXHR)
+        {
+            //Show Message  
+            // alert("File Deleted");      
+        }); 
+        pd.statusbar.hide(); //You choice to hide/not.
+    }
+});
+
+var frmobj = $('#teamForm');
+
+var options = {
+	dataType: "json",
+	beforeSubmit: disableButton,
+	success : function(response) {
+        $('#teamForm')[0].reset();
+		$('p.successMsg-careers').text(response.message);
+        $('#submitCareers').text("SENT");
+        $("#submitCareers").animate({'opacity': '0.5'});
+        $("#submitCareers").attr('disabled', 'disabled');
+        // alert(response.message);
+        $(".ajax-file-upload-statusbar").remove();
+	},
+	error: function() {
+        frmobj.hide();
+        frmobj.parent().append('<p style="padding:10px;">Email not sent, Please try again!</p>');
+	}
+};
+
+
+// $("#teamForm").validate();
+
+function disableButton(data, $form, opts) {
+	$form.find('#submitCareers').text("Sending...!").click(function(e){
+	    // $("#teamForm").validate();
+	});
+}
+
+$("#teamForm").ajaxForm(options);
+
+
+$("#contactForm").validate({ submitHandler: submitFrom });
+
+function submitFrom(form) {
+	var obj = $('form#'+form.id);
+
+	var formData = $('form#'+form.id).serialize()+'&command='+form.id;
+
+	//console.log(formData);
+
+    $("#submitContact").text('Sending...');
+
+	$.post("form_submit.php",  formData , function(data) {
+		if(data.status=='success') {
+			// obj.hide();
+			// obj.parent().append(data.message);
+			$('p.successMsg-contact').text(data.message);
+
+            $("#submitContact").text('Sent');
+            $("#submitContact").animate({'opacity': '0.5'});
+            $("#submitContact").attr('disabled', 'disabled');
+
+
+		} else {
+			// obj.hide();
+			// obj.parent().append(data.message);
+			$('p.successMsg-contact').text(data.message);
+		}
+	}, "json");
+
+	return false;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Background images</title>
+    <link rel="stylesheet" href="backround-imag.css">
+</head>
+<body>
+    <div id="container">
+       <h1>Background images, Amigos</h1>
+       
+       <h2>Properties</h2>
+       <p>There are few different background properties</p>
+       
+       <dl>
+           <dt>
+               background-image
+           </dt>
+           <dd>
+               This property is the location of the image itself,for example
+               <code>h1 { backgound-image:url('https://website.com/img/background.jpg')}
+               </code>
+               <br>
+               or
+               <br><br>
+               <code>
+                   h1 { background-image: url('images/background.jpg')}
+               </code>
+           </dd>
+       </dl>
+       <dl>
+          <dl>
+              <dt>background-color</dt>
+              <dd>
+                  this allows us to add color on our background,an example
+                  <code>h1 {background-color: green};</code>
+              </dd>
+          </dl>
+           <dt>background-repeat</dt>
+           <dd>
+               This is how the image can be repeat p.The value can be any of the 
+               following.
+               
+               <br><br<
+               
+               <code>background-repeat: repeat;</code>
+               <p>This repeats on both x and y axis and will essentially file the  image across the entire background</p>
+               <br>
+               <code>background-repeat: repeat-x</code>
+               <p>The repeats ther background on the x axis,or horizantally</p>
+               <br>
+               <code>background-repeat: repeat-y</code>
+               <p>The repeats ther background on the y axis,or vertically</p>
+               <br>
+               <code>background-repeat: no-repeat</code>
+               <p>this shows image only once without reoeating</p>
+               <br>
+           </dd>
+       </dl>
+       <dl>
+           <dt>Background-poisition</dt>
+           <dd>
+               This is actual poisition of the backgroundthe image withen its container
+               The values can be;
+               <code>background-poisition: top;</code>
+               <code>background-poisition: right;</code>
+               <code>background-poisition: bottom;</code>
+               <code>background-poisition: left;</code>
+               <code>background-poisition: center;</code>
+               
+               <br>
+               It can also be the percentage, length, or combination,like so:
+               <br>
+               
+               <code>background-poisition: 50px 20%;</code>
+           </dd>
+       </dl>
+
+       <h2>Shorthand</h2>
+       <p>Theres a quick way to around background images,and you dont necessarily have to type out all of the above code to set the background images the way you want them</p>
+       <dl>
+           <dt>background</dt>
+           <dd>
+               the "Background" shorthand can handle them all in one
+               <code>background: green
+               url('images/background.jpg') top left np-repeat;</code>
+           </dd>
+       </dl>
+        
+        <!--END documentation
+        -->
+        
+        <h2>Examples</h2>
+        
+        <div id="background-1" class="background-example">
+            background image repeated
+        </div>
+        <div id="background-2" class="background-example">
+            background color
+        </div>
+        <div id="background-3" class="background-example">
+            background image, poisitined, no repeating
+        </div>
+        <div id="background-4" class="background-example">
+            background imag,poisitned,repeated on x poisition
+        </div>
+              
+    </div><!#container>
+</body>
+</html>

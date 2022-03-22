@@ -1,0 +1,20 @@
+/*CSS for project-class.html */
+
+.top-header{
+    font-weight: 400;
+    font-family: Elephant serif ;
+    color: white
+    font-display: auto;
+    text-align: center;
+    font-size: 40px;
+    border-color: aqua;
+    border: solid 1px black;
+    background: orange;
+    padding: 40px 30px 20px 10px;
+    
+}
+
+p{
+    ;
+    
+}

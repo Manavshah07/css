@@ -1,0 +1,115 @@
+
+/* CSS for style  */
+
+body{
+    background:black;
+    font-family: Ebrima,sans-serif;
+}
+h1{
+    color: orange;
+    font-family: Helvetica,Arial,sans-serif;
+}
+div{
+    color: white
+}
+ol{
+    background: white;
+    color: #fc3;
+    padding: 20px 60px;
+    border: solid 2px #fc3;
+    margin: "50px";
+}
+
+
+/* CSS for id-class html1*/
+#idClassPage{
+    background-color: black
+    padding: 20px;
+}
+
+#main-title{
+    color: #fc3;
+    background-color: #333;
+    padding: 10px;
+    margin: 20px;
+    font-size: 28px;
+    
+}
+.section-header{
+    color: olivedrab;
+    font-size: 2em;
+    border: solid 1px blue;
+    padding: 40px 20px 10px ;
+    text-align: center;
+    font-weight: normal;
+    box-shadow: 10px 5px white;
+    box-sizing: content-box
+}
+
+.down-page
+{
+    font-size=1em;
+    border: dashed 1px blue;
+    text-align: center;
+    box-sizing: content-box
+    
+}
+
+/*CSS for project-lass.html */
+
+.top-header{
+    font-weight: 400;
+    font-family: Elephant,serif;
+    font-display: block;
+    text-align: center;
+    font-size: 40px;
+    border-color: black
+}
+
+
+/* Descendant  */
+
+#descendant{
+    background: #f7f7f7;
+}
+
+.primary-box{
+    background: #FFF;
+    color: #333;
+    padding: 20px;
+    margin: 10px;
+}
+
+.box-title{
+    font-weight: 900px;
+    font-family: cursive
+}
+
+.secondary-box{
+    background: #333;
+    padding: 10px 30px
+}
+
+.primary-box .box-title{
+    border-bottom: solid 3px red;
+    padding: 10px;
+    font-family: helvetica,Aria,sans-serif;
+}
+
+.secondary-box p>em{
+    color: #FC3FC3;
+}
+
+/* Grouping */
+
+#grouping h1,#grouping h2,#grouping h3,#grouping h4,#grouping h5,#grouping h6{
+    font-family: Helvetica,Arial, sans-serif
+    font-weight:bold;
+    margin: 20px;
+}
+
+.main-container{
+    width: 600px;
+    margin: 0 auto;
+}
+

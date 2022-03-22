@@ -1,0 +1,79 @@
+/**{
+    margin: 0;
+    padding: 0;
+}
+.top-header{
+    width:325px;
+    height: 148px;
+`    color: black;
+}
+.clearfix:active{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.pull-left{
+    float: left;
+}
+.header{
+    font-size: 15px;
+    padding: 10px;
+    margin-left: 120px;
+}
+.header ul li{
+    display: inline;
+}
+
+}
+.header ul li a:link,
+.header ul li a:visited{
+    color: black;
+    padding: 5px;
+}
+.header ul li a:hover{
+    text-decoration: underline;
+    color: red;
+}
+    */
+
+
+
+
+/*TPP CSS*/
+.top-header{
+    width:900px;
+    height: 135px;
+    background: url('images/Diamond/logo_new.png')top left no-repeat;
+    margin: 10px;
+}
+.nav-header{
+    font-size: 14px;
+    text-align-last: right;
+    padding: 70px; 
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+    text-align: end;
+    margin: 0 auto;
+}
+.nav-header ul li{
+    display: inline;
+    padding: 10px;
+    margin-top: 30px;
+}
+nav-header ul{
+    float: right;
+    width: 600px;
+}
+.nav-header ul li a:link,
+.nav-header ul li a:visited{
+    color: black;
+    padding: 5px;
+}
+.nav-header ul li a:hover{
+    text-decoration: underline;
+    color: darkorange;
+}
+

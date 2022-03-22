@@ -1,0 +1,20 @@
+.pull-right{
+    float: right;
+}
+pull-left{
+    float: left;
+}
+ul{
+    margin-right: 500px;
+}
+.img{
+    display: inline-block;
+
+}
+li{
+    padding: 30px;
+    display: inline;
+}  
+.clearfix{
+    clear: both;
+}*/

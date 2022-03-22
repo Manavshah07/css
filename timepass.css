@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.top-header{
+    width:900px;
+    height: 135px;
+    background: url('images/Diamond/logo_new.png')top left no-repeat;
+    margin: 10px;
+}
+.nav-header{
+    font-size: 14px;
+    text-align-last: right;
+    padding: 60px;
+}
+a{
+    text-decoration: none;
+}
+.nav-header ul li{
+    display: inline;
+    padding: 1px;
+    margin-top: 30px;
+}
+nav-header ul{
+    display: inline-block;
+    width: 300px;
+}
+.nav-header ul li a:link,
+.nav-header ul li a:visited{
+    color: black;
+    padding: 5px;
+}
+.nav-header ul li a:hover{
+    text-decoration: underline;
+    color: darkorange;
+}
+
+
+/* MAIN SECTION*/
+.main-section{
+    width: 995px;
+    height: 400px;
+    padding: 30px;
+}
+/* CATERING hall */
+
+.catering{
+    width: 200px;
+    height: 290px;
+/*    background: url('images/Diamond/catering.png')top left no-repeat;*/
+    padding: 30px;
+}
+.catering-img{
+    position: relative;
+    left: 400px;
+}
+
+.catering-para{
+    margin: 10px;
+    position: relative;
+    left: 350px;
+    
+}
+.read-more{
+    background: #deaf53;
+    font-size: 20px;
+    line-height: 20px;
+    color: #fff;
+}
+.read-more:hover{
+}
+
+/* BANQUETS HALL */
+.banquets{
+    width: 210px;
+    height: 240px;
+    padding: 30px;
+}
+.banquets-img{
+    position: absolute;
+    top: 215px;
+    left: 660px;
+}
+.banquets-para{
+    padding: 30px;
+    position: absolute;
+    top: 250px;
+    left: 610px;
+    width: 130px;
+}
+/*Decorate hall*/
+.decorate{
+    width: 210px;
+    height: 240px;
+    padding: 30px;
+}
+.decorate-img{
+    position: absolute;
+    top: 215px;
+    left:850px;
+}
+.decorate-para{
+    padding: 30px;
+    position: absolute;
+    top: 250px;
+    left: 800px;
+    width: 130px
+}
+/*wedding hall*/
+.wedding{
+    width: 210px;
+    height: 240px;
+    padding: 30px;
+}
+.wedding-img{
+    position: absolute;
+    top: 215px;
+    left: 1050px;
+}
+.wedding-para{
+    padding: 30px;
+    position: absolute;
+    top: 250px;
+    left: 1000px;
+    width: 130px;
+}
+/*About us*/
+.main-body{
+    width: 735px;
+    height: 470px;
+    text-align: right;
+}
+.map-pointer{
+    position: absolute;
+    top: 650px;
+    left: 650px;
+    margin: 20px;
+}
+.about-para{
+    position:absolute;
+    top: 750px;
+    left: 500px;
+    padding: auto;
+    margin: 0 auto;
+    display: block;
+    width: 400px;
+}
+.para{
+    width: 200px;
+    margin: 0 auto;
+}
+.main-body p{
+    text-align: center;
+}
+    
+/*Down setion*/
+.down-section{
+    width: 940px;
+    height: 290px;
+}
+/*WHY US*/
+.why-us{
+    width: 270px;
+    height: 250px;
+}
+.whyus-title{
+    text-align:left; 
+    position: relative;
+    left: 360px;
+}
+.whyus-para{
+    position: absolute;
+    top: 1130px;
+    left: 320px;
+    width: 250px;
+}
+
+/*OUR BELIEF*/
+.our-belief{
+    width: 270px;
+    height: 250px;
+}
+.belief-title{
+    position: absolute;
+    top: 1085px;
+    left: 700px;
+}
+.belief-para{
+    position: absolute;
+    top: 1130px;
+    left: 670px;
+    width: 250px;
+}
+.our-mission{
+    width: 270px;
+    height: 250px;
+}
+.mission-title{
+    position: absolute;
+    top: 1085px;
+    left: 1060px;
+}
+.mission-para{
+    position: absolute;
+    top: 1130px;
+    left: 1040px;
+    width: 250px;
+}

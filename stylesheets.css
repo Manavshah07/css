@@ -1,0 +1,392 @@
+
+
+/*stylesheet.css*/
+
+/*css for text.html*/
+
+*{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+body{
+    margin: 40px;
+    font-family: Georgia, Times, serif;
+    color: #373737;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 10px 0;
+    font-weight: bold;
+    /* A note on Font Weight
+    ===========================
+    The other values are:
+     - lighter
+     - normal
+     - bolder
+    
+    The following are the numeric values for lighter (This should be supported by the font):
+     - 100
+     - 200
+    
+    The following can be used for normal
+     - 300
+     - 400
+    
+    The following can be used for Bold
+     - 500
+     - 600
+     - 700
+    
+    For Bolder you can use (This should be supported by the font):
+     - 800
+     - 900
+    */
+    
+}
+
+h1{
+    font-size: 3.375em;
+}
+h2{
+    font-size: 2.925em;   
+}
+h3{
+    font-size: 2.475em;
+}
+h4{
+    font-size: 2.025em;
+}
+h5{
+    font-size: 1.575em;
+}
+h6{
+    font-size: 1.125em;
+}
+
+p{
+    text-indent: 100px;/*It only indents the 1st line of the p, and its value has to be any numeric*/
+    
+    line-height: 1.4;
+    /*
+    You can use any unit such as px, %, em, rem*/
+}
+span{
+    text-decoration: line-through;
+    /* Other Values
+     - underline
+     - overline
+     - none
+    */
+}
+em{
+    text-transform: capitalize;
+    font-weight: 900;
+    font-style: normal;
+}
+
+strong{
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+blockquote{
+    margin: 20px 40px;
+    border-left: double 6px #373737;
+    border-right: double 6px #373737;
+    padding: 10px 40px;
+}
+
+
+/* CSS For Borders*/
+/* we have given class as same as all the div.because we can desigh all divs as same look.
+
+CSS ka issue hai.
+1 line pe error to aage dekhega hi nhi.
+
+So many Line wasnt in commnet so it was creating error but nothing will be displayed.*/
+
+.border-box{
+    background: #FC3;
+    /* Margin btwn 2 boxes*/
+    margin: 0 0 20px;
+    /* Internal SPacing */
+    padding: 40px;
+    width: 320px;
+    text-align: center;
+
+}
+
+#box1{
+    border: solid 1px #333;
+}
+#box2{
+    border: dashed 1px #333;
+}
+#box3{
+    border: dotted 1px #333;
+}
+
+#box4{
+        border: double 3px #333;
+}
+#box5{
+    border: solid 4px #333;
+}
+#box6{
+    border: dashed 4px #333;
+}
+#box7{
+    border: dotted 4px #333;
+}
+#box8{
+        border: double 6px #333;
+}
+
+
+
+/* CSS for images sprites */
+.image{
+    width: 130px;
+    height: 130px;
+    display: inline-block;
+}
+
+#facebook{
+    background: url('images/all-image.png') -35px -30px;
+}
+
+#twitter{
+        background: url('images/all-image.png') -235px -30px;
+}
+
+
+
+/* CSS styles for links.html*/
+#styling-links{
+    background: #333;
+}
+#styling-links #container{
+    background: #FFF;
+    text-align: center;
+    width: 600px;
+    margin 0 auto;
+    padding: 40px;
+}
+
+#styling-links p{
+    text-indent: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* LoVe HAte*/
+
+/*Unvisited*/
+a:link{
+    color: #FC3
+}
+a:visited{
+    color: #FC3;
+}
+a:hover, a:focus{
+    color: green;
+}
+a:active{
+    color: black;
+}
+
+.link{
+    display: inline-block;
+    padding: 5px 20px;
+    line-height: 30px;
+}
+
+.link:link{
+    color: white;
+    background: #32c5d2;
+    border: solid 1px #32c5d2;
+}
+
+.link:visited{
+    color: white;
+    background: #32c5d2;
+    border: solid 1px #32c5d2;
+}
+
+.link:hover{
+    color:  #32c5d2;
+    background: white;
+    border: solid 1px #32c5d2;
+}
+
+.link:active{
+    color:  #32c5d2;
+    background: white;
+    border: solid 1px black;
+}
+
+.divider{
+    height: 3px;
+    margin: 20px;
+    border: solid 1px #EEE;
+}
+
+.divider:before{
+    content: '';
+    display: block;
+    height: 100%;
+    width:45px;
+    background: #F9BE00;
+    margin: 0 auto;
+    border-left: 45px solid #FF4D4D;
+    border-right:45px solid #4BBCD7;
+}
+
+/*CSS for forms.html*/
+
+
+#container{
+    width: 600px;
+    margin: 0 auto;
+}
+fieldset{
+    padding: 40px;
+    border: solid 1px #AAA;
+    background: url('image/blue_background.jpg');
+}
+
+fieldset legend{
+    background: #FFF;
+    border: solid 1px #AAA;
+    padding: 10px;
+    text-transform: capitalize;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea{
+    display: block;
+    margin: 0 0 20px;
+    padding: 1.25%;
+    width: 47.5%;
+    border: solid 1px #454545;
+    font-family: Monaco,monospace;
+    font-size: 14px;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 0.075em;
+    border-top: none;
+    outline-color: red;
+}
+
+textarea{
+    resize: none;
+}
+label{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: Monaco,monospace;
+    background: url('image/red_background.jpg');
+    width: 47.5%;
+    display: block;
+    padding: 1.25%;
+    border: solid 1px #454545;
+    color: white;
+    border-bottom: none;
+}
+
+input[type="submit"]{
+    background: none;
+    background: url('image/button_background.jpg');
+    height: 40px;
+    padding: 0 40px;
+    border: solid 1px #777;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus{
+    cursor: pointer;
+    border-color: #454545;
+    outline: none;
+}
+
+input[type="submit"]:active{
+    cursor: pointer;
+    border-color: #111;
+    outline: none;
+}
+
+
+/*CSS for FLOATS*/
+
+/*CSS For floats.html*/
+
+.pull-left{
+    float: left;
+}
+
+.pull-right{
+    float: right;
+}
+
+#floats{
+    background: #D41;
+}
+
+#floats #container{
+    width: 500px;
+    background: #FFF;    
+    padding: 40px;
+}
+
+#main-column{
+    width: 30%;
+    background: #555;
+    color: #FFF;
+    padding: 0.5%;
+    margin: 1%;
+}
+
+#sidebar{
+    background: #fc3;
+    width: 30%;
+    padding: 0.5%;
+    margin: 1%;
+}
+
+.clearfix{
+    clear: both;
+}
+
+.clear-fix:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+#footer{
+    margin-top: 10px;
+    background: #555;
+    color: #FFF;
+    text-align: center;
+}
+
+#footer p{
+    text-indent: 0;
+}
+
+img{
+    margin: 10px 5px;
+    border: double 3px #777;
+    padding: 3px;
+}
+
+
+

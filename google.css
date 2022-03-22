@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+} 
+
+body{
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.clearfix:active{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.pull-left{
+    float: left;
+}
+
+.pull-right{
+    float: right;
+}
+
+.container{
+    width: 580px;
+    margin: 125px auto 0;
+    text-align: center;
+}
+
+.logo{
+    width: 272px;
+    height: 92px;
+    text-indent: -9999px;
+    background: url('images/google-logo.png')top left no-repeat;
+    margin: 0 auto;
+}
+
+input[type="text"]{
+    width: 464px;
+    height: 25px;
+    border: solid 1px #eee;
+    padding: 10px;
+    margin: 30px 0;
+}
+
+input[type="text"]{
+    border-color: #ccc
+        
+}
+
+.btn-default{
+    background: #eee;
+    border: solid 1px #eee;
+    padding: 5px;
+    width: 125px;
+    height: 35px;
+    margin: 0 6px;
+    color: #545454;
+    font-weight: 500;
+}
+.btn-default:hover{
+    cursor: pointer;
+    border-color: #aaa;
+    color: #333;
+}
+.btn-big{
+    width: 145px;
+}
+small{
+    display: block;
+    font-size: 13px;
+    margin: 30px 0 0;
+}
+
+small>a{
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+a:link, a:visited{
+    color: #1a0dab;
+    text-decoration: none;
+}
+.header{
+    font-size: 13px;
+    text-align: right;
+    padding: 15px;
+}
+.header ul li{
+    display: inline;
+}
+
+.header ul{
+    margin-right: 15px;
+}
+.header ul li a:link,
+.header ul li a:visited{
+    color: #333;
+    padding: 5px;
+}
+.header ul li a:hover{
+    text-decoration: underline;
+    color: #555;
+}
+
+.header ul li a.btn-blu{
+    background: #4683ea;
+    display: inline-block;
+    color: #fafafa;
+    padding: 5px;
+    height: 20px;
+    width:60px;
+    text-align: center;
+    line-height: 20px;
+    cursor: default;
+}
+
+.header ul li a.btn-blue:hover{
+    text-decoration: none;
+    cursor: default;
+}
+
+.header ul li a.btn-blue:active{
+    position: relative;
+    top: 1px;
+}
+
+footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+.country-name{
+    padding: 0 25px;
+    background: #eee;
+    height: 38px;
+    line-height: 38px;
+    border: solid 1px #dfdfdf;
+    color: #777;
+}
+.main-footer{
+    height: 35px;
+    background: #eee;
+    padding: 0 25px;
+    line-height: 35px;
+}
+.main-footer li{
+    font-size: 12px;
+    display: inline;
+}
+
+.no-padding-left{
+    padding-left: 0!important;
+}
+.no-padding-right{
+    padding-right: 0!important;
+}
+
+.main-footer ul li a:link,
+.main-footer ul li a:visited{
+    padding: 5px 10px;
+    color: #555;
+}
+
+.main-footer ul li a:hover{
+    text-decoration: underline;
+}
+
